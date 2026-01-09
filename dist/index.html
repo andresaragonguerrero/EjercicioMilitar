@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejército - Crear Unidad</title>
+</head>
+
+<body>
+    <h1>Crear Unidad</h1>
+    <div class="seccion-decoradores">
+        <h2> Mejoras de Unidades</h2>
+
+        <div class="info-unidad">
+            <h3>Instrucciones:</h3>
+            <div id="infoUnidadSeleccionada">
+                1. Introduce los datos de la unidad en el formulario<br>
+                2. Aplica mejoras (modificarán los valores del formulario)<br>
+                3. Crea la unidad con los valores mejorados
+            </div>
+        </div>
+
+        <button id="btnMejorarVelocidad" class="boton-decorador">
+            Aplicar +30% Velocidad (+15% precio)
+        </button>
+
+        <button id="btnMejorarBlindaje" class="boton-decorador">
+            Aplicar +30% Blindaje (+20% precio)
+        </button>
+
+        <button id="btnMejorarCompleto" class="boton-decorador">
+            Aplicar Mejora Completa (+35% precio)
+        </button>
+
+        <button id="btnAgregarAmericano" class="boton-decorador boton-americano">
+            🇺🇸 Añadir Marshall Tank (Unidad Americana)
+        </button>
+
+        <div id="resultadoDecorador"></div>
+    </div>
+
+    <form id="formUnidad">
+        <label>Nombre: <input type="text" name="nombre" required></label><br>
+        <label>Velocidad: <input type="number" step="0.1" name="velocidad" required></label><br>
+        <label>Blindaje: <input type="number" step="0.1" name="blindaje" required></label><br>
+        <label>Potencia de Fuego: <input type="number" step="0.1" name="potenciaDeFuego" required></label><br>
+        <label>Precio: <input type="number" step="0.1" name="precio" required></label><br>
+
+        <label>Ejército:
+            <select name="ejercito" id="selectEjercito" required></select>
+        </label><br>
+
+        <label>División:
+            <select name="division" id="selectDivision" required>
+                <option value="Artillería">Artillería</option>
+                <option value="Caballería">Caballería</option>
+                <option value="Infantería">Infantería</option>
+            </select>
+        </label><br>
+
+        <button type="submit">Crear Unidad</button>
+    </form>
+
+    <h2>Crear Ejército</h2>
+    <form id="formEjercito">
+        <label>Nombre del Ejército: <input type="text" name="nombreEjercito" required></label><br>
+        <label>Fondo: <input type="number" step="0.1" name="fondoEjercito" required></label><br>
+        <button type="submit">Crear Ejército</button>
+    </form>
+
+    <h2>Ejércitos creados</h2>
+    <ul id="listaEjercitos"></ul>
+
+    <h2>Eliminar unidades</h2>
+    <label>Nombre de unidad a eliminar: <input type="text" id="nombreABorrar"></label>
+    <button id="borrarUna">Borrar unidad</button>
+    <button id="borrarTodas">Borrar todas</button>
+
+    <h2>Unidades creadas</h2>
+    <ul id="listaUnidades"></ul>
+
+    <h2>Informe del Ejército</h2>
+    <button id="btnInforme">Ver informe</button>
+
+    <ul id="informeEjercito"></ul>
+
+    <script type="module" src="./src/index.js"></script>
+
+</body>
+
+</html>
